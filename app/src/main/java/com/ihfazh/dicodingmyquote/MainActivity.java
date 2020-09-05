@@ -2,8 +2,10 @@ package com.ihfazh.dicodingmyquote;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView tvQuote, tvAuthor;
     ProgressBar mProgressBar;
+    Button btnGetAllQuotes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,15 @@ public class MainActivity extends AppCompatActivity {
         tvAuthor = findViewById(R.id.tvAuthor);
         tvQuote = findViewById(R.id.tvQuote);
         mProgressBar = findViewById(R.id.progressBar);
+        btnGetAllQuotes = findViewById(R.id.btnAllQuotes);
+
+        btnGetAllQuotes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, QuotesListActivity.class);
+                startActivity(intent);
+            }
+        });
 
         getRandomQuote();
     }
