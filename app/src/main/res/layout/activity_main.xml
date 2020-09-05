@@ -16,7 +16,7 @@
             android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            tools:text="Hello World!"
             android:textAlignment="center"
             />
 
@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvAuthor"
             android:textSize="14sp"
-            android:text="Ihfazhillah"
+            tools:text="Ihfazhillah"
             android:textStyle="italic"
             android:textAlignment="center"/>
 
